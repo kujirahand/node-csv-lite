@@ -43,9 +43,14 @@ console.log(c); // 1,2,3\n4,5,6
 - CSV.readFileSync(filename, encoding)
 - CSV.readFile(filename, encoding, callback)
 
+## Save to file
+- CSV.writeFileSync(filename, data_ary, encoding)
+- CSV.writeFile(filename, encoding, callback)
+
 ## Test module
 
 ```
 $ mocha test/simple.js
 ```
+
 
