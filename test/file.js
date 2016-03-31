@@ -30,5 +30,11 @@ describe('readFileSync', function () {
       assert.equal(a[2][1], 'ジュース');
     });
   });
+  
+  it('file length', function () {
+    var a = CSV.readFileSync(file_test_sjis, "Shift_JIS");
+    assert.equal(a.length, 4);
+    assert.equal(a[0].length, 3);
+  });
 });
 
