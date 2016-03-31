@@ -110,6 +110,7 @@ var a = CSV.readFileSync(fname);
 - CSVObject.insertCol(colNo, values)
 - CSVObject.deleteRow(rowNo)
 - CSVObject.deleteCol(colNo)
+- CSVObject.add(rowArray)
 - CSVObject.length
 - CSVObject.useHeader
 
