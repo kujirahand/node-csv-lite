@@ -111,7 +111,7 @@ var a = CSV.readFileSync(fname);
 - CSVObject.deleteRow(rowNo)
 - CSVObject.deleteCol(colNo)
 - CSVObject.length
-
+- CSVObject.useHeader
 
 ## Test module
 
