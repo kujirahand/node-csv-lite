@@ -1,0 +1,5 @@
+cid	name	price
+1001	apple	350
+1002	orange	400
+1003	banana	250
+

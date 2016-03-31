@@ -10,6 +10,23 @@ describe('stringify', function () {
   it('simple', function () {
     assert.equal(txt, "1,2,3\r\n4,5,6\r\n");
   });
+
+  it('value in comma', function () {
+    var a = [
+      ['name', 'age'],
+      ['Daniel,K', 30],
+    ];
+    var csv = CSV.stringify(a);
+    assert.equal(csv, "name,age\r\n\"Daniel,K\",30\r\n");
+  });
+  it('value in CRLF', function () {
+    var a = [
+      ['name', 'age'],
+      ["aaa\r\nbbb", 30],
+    ];
+    var csv = CSV.stringify(a);
+    assert.equal(csv, "name,age\r\n\"aaa\r\nbbb\",30\r\n");
+  });
 });
 
 describe('parse CSV', function () {

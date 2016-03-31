@@ -11,13 +11,47 @@ $ npm install csv-lite
 
 ## Usage
 
+Simple static method:
+
 ```javascript
 var CSV = require('csv-lite');
+
+// parse CSV string
 var txt = "1,2,3\n11,22,33\n111,222,333";
 var a = CSV.parse(txt);
 console.log(a[0][0]); // 1
 console.log(a[1][1]); // 22
+
+// load from file
+var a = CSV.readFileSync("test.csv", "Shift_JIS");
+// save to file
+CSV.writeFileSync("test.csv", a, "Shift_JIS");
 ```
+
+OOP method:
+
+```javascript
+var CSVObject = require('csv-lite').CSVObject;
+
+var csv = new CSVObject();
+csv.parse("name,age\r\nAki,14\r\nHuyu,20");
+console.log(csv.getCell(1,0)); // Aki
+console.log(csv.getCell(2,0)); // Huyu
+
+// load
+csv.readFileSync("test.csv", "Shift_JIS");
+
+// save
+csv.setArray([["aaa","bbb"],["ccc","dde"]]);
+csv.writeFileSync("test.csv", "Shift_JIS);
+```
+
+## Parse and Stringify
+
+method:
+
+- CSV.parse()
+- CSV.stringify()
 
 ## Parse CSV from text
 
@@ -44,8 +78,19 @@ console.log(c); // 1,2,3\n4,5,6
 - CSV.readFile(filename, encoding, callback)
 
 ## Save to file
+
 - CSV.writeFileSync(filename, data_ary, encoding)
 - CSV.writeFile(filename, encoding, callback)
+
+
+## TSV (Tab separated value)
+
+```javascript
+// set tsv option
+CSV.options.delimiter = "\t";
+// load
+var a = CSV.readFileSync(fname);
+```
 
 ## Test module
 

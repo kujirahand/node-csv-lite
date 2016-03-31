@@ -2,7 +2,7 @@
   "name": "csv-lite",
   "version": "0.0.4",
   "description": "CSV Reader/Writer",
-  "main": "lib/csv-lite.js",
+  "main": "index.js",
   "dependencies": {
     "iconv-lite": "^0.4.13"
   },

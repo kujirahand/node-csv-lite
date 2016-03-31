@@ -11,7 +11,11 @@ var a = [
   [1003, "Soba-B", 320]
 ];
 
+
+// stringify
 var s = CSV.stringify(a);
 console.log(s);
 
+// save to file
+CSV.writeFileSync('test-csv.csv');
 

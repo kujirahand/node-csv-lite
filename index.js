@@ -1,4 +1,3 @@
-// index.js
-var CSV = require('./lib/csv-lite');
-module.exports = CSV;
+// index.js for csv-lite
+module.exports = require(__dirname + '/lib/csv-object.js');
 
