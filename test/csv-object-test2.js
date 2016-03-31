@@ -98,7 +98,17 @@ describe('CSVObject2', function () {
     assert.equal(csv.getCell(2,0), "Aki");
     assert.equal(csv.getCell(3,0), "Huyu");
   });
-
+  it('getColValues', function () {
+    var csv = new CSV.CSVObject();
+    csv.setArray([
+      ["name", "age", "rank"],
+      ["Nami", 30, 1],
+      ["Aki",  20, 2],
+      ["Huyu", 10, 3]
+    ]);
+    var ranks = csv.getColValues(2);
+    assert.equal(ranks.join(":"), "rank:1:2:3");
+  });
 
 });
 

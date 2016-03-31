@@ -1,6 +1,6 @@
 {
   "name": "csv-lite",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "CSV Reader/Writer (Supported Multibyte encodings)",
   "main": "index.js",
   "dependencies": {
