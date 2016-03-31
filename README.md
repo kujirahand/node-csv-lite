@@ -38,12 +38,12 @@ csv.parse("name,age\r\nAki,14\r\nHuyu,20");
 console.log(csv.getCell(1,0)); // Aki
 console.log(csv.getCell(2,0)); // Huyu
 
+// save
+csv.writeFileSync("test.csv", "Shift_JIS")
+
 // load
 csv.readFileSync("test.csv", "Shift_JIS");
-
-// save
-csv.setArray([["aaa","bbb"],["ccc","dde"]]);
-csv.writeFileSync("test.csv", "Shift_JIS);
+console.log(csv.getCell(1,0)); // Aki
 ```
 
 ## Parse and Stringify
@@ -91,6 +91,27 @@ CSV.options.delimiter = "\t";
 // load
 var a = CSV.readFileSync(fname);
 ```
+
+## OOP method
+
+- CSVObject.toString()
+- CSVObject.parse(csv_str, delimiter)
+- CSVObject.getCell(row, col)
+- CSVObject.setCell(row, col, value)
+- CSVObject.setArray( array )
+- CSVObject.getArray()
+- CSVObject.find(colNo, keyword, offset)
+- CSVObject.findAll(colNo, keyword)
+- CSVObject.findAll(colNo, keyword, offset, limit)
+- CSVObject.filter(colNo, callback)
+- CSVObject.sort(colNo, isAsc)
+- CSVObject.sortNumber(colNo, isAsc)
+- CSVObject.insertRow(rowNo, rowArray)
+- CSVObject.insertCol(colNo, values)
+- CSVObject.deleteRow(rowNo)
+- CSVObject.deleteCol(colNo)
+- CSVObject.length
+
 
 ## Test module
 
