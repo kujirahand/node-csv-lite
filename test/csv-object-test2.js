@@ -31,12 +31,19 @@ describe('CSVObject2', function () {
   it('sort2', function () {
     //
     var csv = new CSV.CSVObject();
-    csv.parse("name,rank,age\nHaru,A,22\nNatu,B,23\nAki,C,19\n");
+    csv.parse("name,rank,age\nHaru,A,22\nNatu,B,23\nAki,C,9\n");
     csv.useHeader = true;
     csv.sort(1, false); // order by rank DESC
     assert.equal(csv.getCell(1,0), "Aki");
     assert.equal(csv.getCell(2,0), "Natu");
     assert.equal(csv.getCell(3,0), "Haru");
+  });
+
+  it('sort3', function () {
+    //
+    var csv = new CSV.CSVObject();
+    csv.parse("name,rank,age\nHaru,A,22\nNatu,B,23\nAki,C,9\n");
+    csv.useHeader = true;
     //
     csv.sort(2); // order by age ASC
     assert.equal(csv.getCell(1,0), "Aki");
