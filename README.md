@@ -2,6 +2,7 @@
 
 CSV Reader/Writer for Node.js
 
+When you use browser, you can use csv-lite-js<https://github.com/kujirahand/csv-lite-js>.
 
 ## Install
 
