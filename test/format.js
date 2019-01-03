@@ -1,5 +1,5 @@
 // test format
-var CSV = require('../');
+var CSV = require('../index.js');
 var CSVObject = CSV.CSVObject;
 var assert = require('assert');
 
